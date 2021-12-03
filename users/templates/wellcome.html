@@ -1,0 +1,10 @@
+{% extends "common/base.html" %}
+
+{% block conteudo %}
+  <div class="tittle__destinos">
+  {% if user.is_authenticated %}
+  <h1>Olá! Seja bem vindo, {{user.username}}!</h1>
+  <p>Espero que aproveite a experiência!</p>
+  {% endif %} 
+{% endblock conteudo %}
+

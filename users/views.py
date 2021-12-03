@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, logout 
 from django.contrib.auth.forms import AuthenticationForm
 
+
 def register_request(request):
     if request.method == "POST":
         form = NewUserForm(request.POST)
@@ -15,7 +16,7 @@ def register_request(request):
             return render(request, 'index.html')
     messages.error(request, "Ooops... ocorreu algum erro no seu cadastro!")
     form = NewUserForm()
-    return render (request=request, template_name="criar.html", context={"register_form":form})
+    return render(request=request, template_name="criar.html", context={"register_form":form})
 
 def login_request(request):
     if request.method == "POST":
@@ -27,7 +28,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"Agora você não está mais logado como {username}.")
-                return render(request, 'index.html')
+                return render(request,'wellcome.html')
             else:
                 messages.error(request,"Username ou senha incorretos")
         else:
@@ -39,7 +40,3 @@ def logout_request(request):
     logout(request)
     messages.info(request, "Até mais!!") 
     return render(request, 'logout.html')
-
-def go_home(request):
-    return render(request, 'index.html')
-
