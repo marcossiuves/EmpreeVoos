@@ -1,0 +1,30 @@
+{% extends "common/base.html" %}
+
+{% block conteudo %}
+{% if user.is_authenticated %}
+<h2>Novo agendamentos:</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Destino</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Quantidade pessoas</th>
+      <th scope="col">Preço total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for destino in lista_destinos %}    
+    <tr>     
+      <td>{{ destino.nomeDestino }}</td>      
+      <td>{{destino.precoPorPessoa}}</td>
+      <td><form method="POST"> <input type="text" id="nome" /> <button class="btn btn-primary" type="submit">Confirmar</button>  </form>
+</td>          
+    </tr>
+    {% endfor %}
+ {% else %}
+    <h3>Favor fazer <a href="/conta/login">login</a> primeiro!</h3>
+ {% endif %}
+{% endblock conteudo %}
+
+
