@@ -26,7 +26,7 @@ def login_request(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.info(request, f"Agora você está logado como: {username}.")
+                messages.info(request, f"Agora você não está mais logado como {username}.")
                 return render(request, 'index.html')
             else:
                 messages.error(request,"Username ou senha incorretos")

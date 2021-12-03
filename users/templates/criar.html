@@ -5,7 +5,7 @@
 
 <!--Register--> 
 <div class="container py-5 form_container">
-	<h1 style="margin-bottom: 4rem;">Register</h1>
+	<h1 style="margin-bottom: 4rem;">Registrar</h1>
 	
 	<form method="POST">
 		{% csrf_token %}
@@ -13,7 +13,7 @@
 		<button class="button__register" type="submit">Register</button>
 	</form>
 	<hr class="line">
-	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+	<p class="text-center">Se você já é registrado faça <a href="/login">login</a>.</p>
 
 {% if messages %}
 <ul class="messages">
