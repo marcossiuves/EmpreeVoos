@@ -1,17 +1,29 @@
 {% extends "common/base.html" %}
 
 {% block conteudo %}
-
+  <div class="tittle__destinos">
   {% if user.is_authenticated %}
   <h1>Olá!<br> seja bem vindo, {{user.username}}!</h1>
   {% endif %}
-  <h1>Destinos</h1>
+  
+  <h2>Destinos</h2>
+  <p>Viaje para os melhores lugares e tenha as melhores experiências do mundo</p>
+</div>
+  <div class="container__destinos">
   {% for destino in lista_destinos %}
-  <h3>{{ destino.nomeDestino }}</h3>
-  <img src="{{ destino.imagem.url }}" alt="{{ destino.nomeDestino }}">
-  <p> Preço: {{destino.precoPorPessoa}} por pessoa </p>
-  <p> Descrição: {{destino.descricao}} </p>
+  
+  <div class="card__destinos">
+    <div class="img__destino">
+      <img src="{{ destino.imagem.url }}" alt="{{ destino.nomeDestino }}">
+    </div>
+    <div class="infos">
+  <h3 id="destino__nome">{{ destino.nomeDestino }}</h3>
+  <p id="destino__preco"><em>R${{destino.precoPorPessoa}} por pessoa</em></p>
+  <p id="destino__descricao">{{destino.descricao}} </p>
+</div>
+</div>
   {% endfor %}
+</div>
   
 {% endblock conteudo %}
 

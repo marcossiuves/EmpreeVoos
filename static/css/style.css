@@ -3,10 +3,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    
     list-style: none;
     outline: none;
     letter-spacing: 1px;
+    font-weight: 300;
 }
 
 p{
@@ -20,7 +21,9 @@ body {
   
     font-family: 'Poppins', sans-serif;
 }
-
+a{
+    text-decoration: none;
+}
 /* PAGINA PRINCIPAL */
 
 .container__main{
@@ -71,6 +74,8 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   font-size: 20px;
+
 }
 
 
@@ -94,12 +99,19 @@ body {
     color: white;
     border-bottom: 2px solid transparent;
     text-decoration: none;
-
+    outline: none;
 }
 
-.container__navbar a:hover{
+.container__navbar a:hover:not(.bi-person-square){
     background-color: rgb(63, 63, 105);
     border-bottom: 2px solid white;
+}
+.bi-person-square{
+    font-size: 2rem;
+}
+
+.bi-person-square{
+    color: rgb(85, 85, 117);
 }
 
 .asteriskField{
@@ -142,3 +154,73 @@ body {
     color: white;
     
 }
+
+.error{
+    color: red;
+}
+
+
+
+/* CARDS DESTINOS */
+
+.container__destinos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem;
+    gap: 3rem;
+    row-gap: 5rem;
+}
+
+.tittle__destinos{
+    width: 100%;
+    padding-left: 2rem;
+}
+
+.tittle__destinos h1{
+
+}
+
+
+.card__destinos{
+    width: 350px;
+    max-height: 450px;
+    border-radius: 1rem;   
+    box-shadow: -1px 10px 15px rgba(0, 0, 0, 0.37);
+    overflow-y:auto;
+    transition: all .5s ease-in-out;
+}
+
+.card__destinos:hover{
+    transform: scale(1.1);
+}
+
+.card__destinos::-webkit-scrollbar{
+    display: none;
+}
+
+.img__destino{
+    width: 100%;
+    height: 170px;
+}
+
+.img__destino img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infos{
+    padding: 1rem;
+}
+
+#destino__preco{
+    padding: .8rem 0.6rem;
+    background-color: rgba(128, 128, 128, 0.425);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+

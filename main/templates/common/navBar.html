@@ -5,12 +5,13 @@
 
   <div class="container__navbar">
     <a href="/">Home</a>
-    <a href="/novoAgendamento">Agendar</a>
     {% if user.is_authenticated %}
-  <a href="/conta/logout">Sair</a> |
-  <a class="nav-link" href="#">Olá, {{user.username}}!</a> |
+    <a href="/novoAgendamento">Agendar</a>
+  <a href="/conta/logout">Sair</a> 
+  <a class="nav-link" href="#">Olá, {{user.username}}!</a>
   {% else %}
-  <a href="/conta/login">login</a> |
+  <a href="/conta/login">Agendar</a>
+  <a href="/conta/login"><i class="bi bi-person-square"></i></a>
   {% endif %}
   </div>
 </nav>

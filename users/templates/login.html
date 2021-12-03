@@ -4,20 +4,26 @@
 {% load crispy_forms_tags %}         
 
 <!--Login--> 
-<div class="container py-5">
-  <h1>Login</h1>
-  <form method="POST">
-    {% csrf_token %}
-    {{ login_form|crispy }}
-    <button class="btn btn-primary" type="submit">Login</button>
-  </form>
-  <p class="text-center">Não tem uma conta?<a href="/conta/criar">Registre-se</a>.</p>
-</div>
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% endblock %}
+<div class="container ">
+
+  <div class=" py-5 container__login">
+    <h1 style="text-align: center;">Login</h1>
+    <form method="POST" class="form__login">
+      {% csrf_token %}
+      {{ login_form|crispy }}
+      <button class="button__login" type="submit">Login</button>
+      
+      <p class="text-center" style="margin: 3rem;">Não tem uma conta?<a href="/conta/criar">Registre-se</a>.</p>
+    </form>
+    
+  </div>
+  {% if messages %}
+  <ul class="messages">
+      {% for message in messages %}
+      <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
+  </ul>
+  
+  {% endif %}
+  </div>
+  {% endblock %}
