@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=Ubuntu:ital,wght@0,300;0,500;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+p{
+    font-size: 18px;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+body {
+  
+    font-family: 'Poppins', sans-serif;
+}
+
+/* PAGINA PRINCIPAL */
+
+.container__main{
+    width: 100%;
+    height: calc(100vh - 7rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
+
+/* BARRA DE MENU */
+
+.logo {
+    border: 1px solid white;
+    height: 80%;
+    margin-left: 2rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+   font-family: 'Ubuntu', sans-serif;
+   display: flex;
+   align-items: center;
+   padding: 0 15px;
+}
+
+.navbar__default{
+    width: 100%;
+    height: 7rem;
+   background-color: rgb(11, 11, 75);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container__navbar{
+    right: 0;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container__navbar a {
+    padding: 2rem;
+    transition: all .3s ease-in-out;
+    color: white;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+
+}
+
+.container__navbar a:hover{
+    background-color: rgb(63, 63, 105);
+    border-bottom: 2px solid white;
+}
+
+.asteriskField{
+    color: red;
+}
+
+.form_container{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.controls ul{
+    display: none;
+}
+
+.line{
+    width: 30%;
+    height: 1px;
+    margin: 2rem auto;
+    background-color: rgb(63, 63, 105);
+}
+
+.button__register{
+    background: rgb(11, 11, 75);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    border-radius: 10%;
+    transition: all .3s linear;
+    margin: 0 auto;
+    outline: none;
+}
+
+.button__register:hover{
+    background-color: rgb(98, 98, 122);
+    color: white;
+    
+}

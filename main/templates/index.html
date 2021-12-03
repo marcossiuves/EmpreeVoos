@@ -1,0 +1,17 @@
+{% extends "common/base.html" %}
+
+{% block conteudo %}
+
+  {% if user.is_authenticated %}
+  <h1>Olá!<br> seja bem vindo, {{user.username}}!</h1>
+  {% endif %}
+  <h1>Destinos</h1>
+  {% for destino in lista_destinos %}
+  <h3>{{ destino.nomeDestino }}</h3>
+  <img src="{{ destino.imagem.url }}" alt="{{ destino.nomeDestino }}">
+  <p> Preço: {{destino.precoPorPessoa}} por pessoa </p>
+  <p> Descrição: {{destino.descricao}} </p>
+  {% endfor %}
+  
+{% endblock conteudo %}
+
